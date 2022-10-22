@@ -1,0 +1,178 @@
+/*General styles*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Blue: #5747ea;
+  --work: #ff8c66;
+  --play: #56c2e6;
+  --study: hsl(348, 100%, 68%);
+  --exercise: #4acf81;
+  --social: #7078c9;
+  --self-care: #f1c65b;
+  --Very-dark-blue: #0f1424;
+  --Dark-blue: #1c204b;
+  --Desaturated-blue: #6f76c8;
+  --Pale-Blue: #bbc0ff;
+  --White: #fff;
+}
+body {
+  background-color: var(--Very-dark-blue);
+  font-family: "Rubik", sans-serif;
+  color: var(--Pale-Blue);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__container {
+  display: flex;
+  min-width: 1050px;
+  height: auto;
+}
+
+/*************User section styles***************/
+.user__section {
+  width: 255px;
+  height: auto;
+  padding-top: 24px;
+}
+
+.user__information {
+  background-color: var(--Blue);
+  border-radius: 16px;
+}
+.user__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 35px 32px;
+}
+
+.user__title {
+  font-size: 0.874rem;
+  font-weight: 400;
+  margin: 5px 32px;
+}
+
+.user__name {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--White);
+  padding-left: 32px;
+  padding-bottom: 80px;
+}
+
+.user__dates__container {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 26px 32px 32px;
+  background-color: var(--Dark-blue);
+}
+
+.daily:hover,
+.weekly:hover,
+.monthly:hover {
+  cursor: pointer;
+  color: var(--White);
+}
+/*************Statistics section styles**************/
+
+.statistics__section {
+  width: 800px;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 24px;
+  gap: 20px;
+}
+
+.card {
+  width: 240px;
+  height: 245px;
+  position: relative;
+}
+.card__background {
+  height: 80px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
+}
+/*Used a different class in each card for pass a diferent background color*/
+/*the class name must be exactly as it is generated in the js*/
+.card__Work {
+  background-color: var(--work);
+}
+
+.card__Play {
+  background-color: var(--play);
+}
+
+.card__Study {
+  background-color: var(--study);
+}
+
+.card__Exercise {
+  background-color: var(--exercise);
+}
+
+.card__Social {
+  background-color: var(--social);
+}
+
+.card__Self {
+  background-color: var(--self-care);
+}
+
+.card__image {
+  margin-top: -10px;
+  padding-left: 140px;
+}
+
+.card__details {
+  background-color: var(--Dark-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 16px;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  bottom: 0px;
+}
+
+.card__details:hover {
+  background-color: var(--Desaturated-blue);
+  cursor: pointer;
+}
+
+.card__activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__time {
+  height: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+.card__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--White);
+}
+
+.card__hour {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--White);
+}
